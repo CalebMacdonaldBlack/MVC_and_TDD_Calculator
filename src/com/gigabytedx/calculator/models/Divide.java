@@ -1,4 +1,4 @@
-package sample.models;
+package com.gigabytedx.calculator.models;
 
 /**
  * Created by calebmacdonaldblack on 3/19/16.

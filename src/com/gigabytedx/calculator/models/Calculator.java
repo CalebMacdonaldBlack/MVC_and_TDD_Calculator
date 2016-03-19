@@ -1,4 +1,4 @@
-package sample.models;
+package com.gigabytedx.calculator.models;
 
 /**
  * Created by calebmacdonaldblack on 3/19/16.
@@ -79,23 +79,7 @@ abstract public class Calculator {
      * @return A new instance of Calculator which calculates the specified operation
      */
     public static Calculator findOperatorFromId(String id){
-        System.out.println("id is: " + id);
-        switch(id){
-            case "add":
-                return new Add();
-            case "subtract":
-                return new Subtract();
-            case "divide":
-                return new Divide();
-            case "multiply":
-                return new Multiply();
-            case "modulus":
-                return new Modulus();
-            case "power":
-                return new Power();
-            default:
-                throw new NullPointerException();
-        }
+        return Operations.valueOf(id).getOperation();
     }
 
     /**

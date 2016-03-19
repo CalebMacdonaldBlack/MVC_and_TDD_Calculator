@@ -1,10 +1,10 @@
-package sample;
+package com.gigabytedx.calculator;
 
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.input.MouseEvent;
-import sample.models.Calculator;
+import com.gigabytedx.calculator.models.Calculator;
 
 
 public class Controller {

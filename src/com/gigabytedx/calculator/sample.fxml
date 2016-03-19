@@ -7,7 +7,7 @@
 <?import javafx.scene.paint.*?>
 <?import javafx.scene.text.*?>
 
-<AnchorPane id="AnchorPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="303.0" prefWidth="300.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/2.2" fx:controller="sample.Controller">
+<AnchorPane id="AnchorPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="303.0" prefWidth="300.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/2.2" fx:controller="com.gigabytedx.calculator.Controller">
   <children>
     <Button fx:id="num_1" layoutX="14.0" layoutY="131.0" mnemonicParsing="false" onMouseClicked="#onNumberClick" prefHeight="50.0" prefWidth="50.0" text="1">
       <font>
@@ -25,17 +25,17 @@
     <Button fx:id="num_0" font="$x1" layoutX="183.0" layoutY="244.0" mnemonicParsing="false" onMouseClicked="#onNumberClick" prefHeight="50.0" prefWidth="50.0" text="0" />
     <Button fx:id="clear" font="$x1" layoutX="14.0" layoutY="74.0" mnemonicParsing="false" onMouseClicked="#onClearClick" prefHeight="50.0" prefWidth="50.0" text="C" />
     <Button fx:id="equals" font="$x1" layoutX="241.0" layoutY="188.0" mnemonicParsing="false" onMouseClicked="#onEqualsClick" prefHeight="106.0" prefWidth="50.0" text="=" />
-    <Button fx:id="multiply" font="$x1" layoutX="241.0" layoutY="74.0" mnemonicParsing="false" onMouseClicked="#onOperatorClick" prefHeight="50.0" prefWidth="50.0" text="x" />
-    <Button fx:id="divide" font="$x1" layoutX="183.0" layoutY="74.0" mnemonicParsing="false" onMouseClicked="#onOperatorClick" prefHeight="50.0" prefWidth="50.0" text="/" />
+    <Button fx:id="MULTIPLY" font="$x1" layoutX="241.0" layoutY="74.0" mnemonicParsing="false" onMouseClicked="#onOperatorClick" prefHeight="50.0" prefWidth="50.0" text="x" />
+    <Button fx:id="DIVIDE" font="$x1" layoutX="183.0" layoutY="74.0" mnemonicParsing="false" onMouseClicked="#onOperatorClick" prefHeight="50.0" prefWidth="50.0" text="/" />
     <Label fx:id="display" layoutX="14.0" layoutY="14.0" prefHeight="50.0" prefWidth="277.0" text="" textAlignment="RIGHT">
       <font>
         <Font size="30.0" />
       </font>
     </Label>
-    <Button fx:id="subtract" font="$x1" layoutX="241.0" layoutY="131.0" mnemonicParsing="false" onMouseClicked="#onOperatorClick" prefHeight="50.0" prefWidth="50.0" text="-" />
-    <Button fx:id="add" layoutX="183.0" layoutY="131.0" mnemonicParsing="false" onMouseClicked="#onOperatorClick" prefHeight="50.0" prefWidth="50.0" text="+" />
-    <Button fx:id="power" layoutX="72.0" layoutY="74.0" mnemonicParsing="false" onMouseClicked="#onOperatorClick" prefHeight="50.0" prefWidth="50.0" text="Pow" />
-    <Button fx:id="modulus" layoutX="128.0" layoutY="74.0" mnemonicParsing="false" onMouseClicked="#onOperatorClick" prefHeight="50.0" prefWidth="50.0" text="Mod">
+    <Button fx:id="SUBTRACT" font="$x1" layoutX="241.0" layoutY="131.0" mnemonicParsing="false" onMouseClicked="#onOperatorClick" prefHeight="50.0" prefWidth="50.0" text="-" />
+    <Button fx:id="ADD" layoutX="183.0" layoutY="131.0" mnemonicParsing="false" onMouseClicked="#onOperatorClick" prefHeight="50.0" prefWidth="50.0" text="+" />
+    <Button fx:id="POWER" layoutX="72.0" layoutY="74.0" mnemonicParsing="false" onMouseClicked="#onOperatorClick" prefHeight="50.0" prefWidth="50.0" text="Pow" />
+    <Button fx:id="MODULUS" layoutX="128.0" layoutY="74.0" mnemonicParsing="false" onMouseClicked="#onOperatorClick" prefHeight="50.0" prefWidth="50.0" text="Mod">
       <font>
         <Font size="13.0" fx:id="x2" />
       </font>
