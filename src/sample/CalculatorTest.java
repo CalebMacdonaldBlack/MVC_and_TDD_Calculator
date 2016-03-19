@@ -153,13 +153,14 @@ public class CalculatorTest {
     }
 
     @org.junit.Test
-    public void testRemoveDecimalIfWhenNeeded(){
-        assertEquals(Calculator.removeDecimalIfNeeded("12.0"), ("12"));
+    public void testGetResult(){
+        Calculator.setNum1AndOperator("8", "add");
+        assertEquals(Calculator.setNum2AndGetResult("5"),"13");
     }
 
     @org.junit.Test
-    public void testRemoveDecimalIfWhenNotNeeded(){
-        assertEquals(Calculator.removeDecimalIfNeeded("6.75"), ("6.75"));
+    public void testGetResultAgain(){
+        Calculator.setNum1AndOperator("8", "divide");
+        assertEquals(Calculator.setNum2AndGetResult("2"),"4");
     }
-
 }

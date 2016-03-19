@@ -6,6 +6,7 @@ import javafx.scene.control.Label;
 import javafx.scene.input.MouseEvent;
 import sample.models.Calculator;
 
+
 public class Controller {
 
 
@@ -15,12 +16,20 @@ public class Controller {
     @FXML
     private Label display;
 
+    /**
+     * Event called when a number or decimal is clicked. Gets the new display with the number clicked added to it from the model
+     * @param event
+     */
     @FXML
     private void onNumberClick(MouseEvent event) {
         Button source = (Button) event.getSource();
         display.setText(Calculator.extractNumberFromIdAndAddToString(source.getId(), display.getText()));
     }
 
+    /**
+     * event called when an operation is clicked. Sends the number in the display and the operation id to the model
+     * @param event
+     */
     @FXML
     private void onOperatorClick(MouseEvent event) {
         Button source = (Button) event.getSource();
@@ -29,6 +38,10 @@ public class Controller {
         display.setText("");
     }
 
+    /**
+     * Event called when the clear button is click. Clears the display
+     * @param event
+     */
     @FXML
     private void onClearClick(MouseEvent event) {
         Button source = (Button) event.getSource();
@@ -36,6 +49,11 @@ public class Controller {
         display.setText("");
     }
 
+    /**
+     * Event called when the equals button is clicked. Passes the number in the display as the second number to the model and
+     * gets the result as a formatted String. This then updates the display with that number
+     * @param event
+     */
     @FXML
     private void onEqualsClick(MouseEvent event) {
         Button source = (Button) event.getSource();
