@@ -18,16 +18,14 @@ public class Controller {
     @FXML
     private void onNumberClick(MouseEvent event) {
         Button source = (Button) event.getSource();
-        display.setText(Calculator.concatNumber(source.getId(), display.getText()));
+        display.setText(Calculator.extractNumberFromIdAndAddToString(source.getId(), display.getText()));
     }
 
     @FXML
     private void onOperatorClick(MouseEvent event) {
         Button source = (Button) event.getSource();
 
-        Calculator.setNum1(display.getText());
-        Calculator.setOperator(source.getId());
-
+        Calculator.setNum1AndOperator(display.getText(), source.getId());
         display.setText("");
     }
 
@@ -42,8 +40,8 @@ public class Controller {
     private void onEqualsClick(MouseEvent event) {
         Button source = (Button) event.getSource();
 
-        Calculator.setNum2(display.getText());
-        display.setText(Calculator.getResult());
+        ;
+        display.setText(Calculator.setNum2AndGetResult(display.getText()));
 
     }
 

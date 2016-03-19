@@ -10,16 +10,18 @@ abstract public class Calculator {
 
     public abstract double calculate();
 
-    public static void setNum1(String number){
+    public static void setNum1AndOperator(String number, String operator){
         num1 = Double.valueOf(number);
+        setOperator(operator);
     }
 
-    public static void setNum2(String number){
+    public static String setNum2AndGetResult(String number){
         try {
             num2 = Double.valueOf(number);
         }catch(NumberFormatException e){
             num2 = 0;
         }
+        return getResult();
     }
 
     public static double getNum2() {
@@ -62,7 +64,7 @@ abstract public class Calculator {
         }
     }
 
-    public static String concatNumber(String id, String label) {
+    public static String extractNumberFromIdAndAddToString(String id, String label) {
         String[] idSplit = id.split("_");
         if(idSplit[1].equals("dot"))
             return label + ".";

@@ -1,6 +1,5 @@
 package sample;
 
-import org.junit.Assert;
 import sample.models.*;
 
 import static org.hamcrest.core.IsInstanceOf.instanceOf;
@@ -44,113 +43,113 @@ public class CalculatorTest {
 
     @org.junit.Test
     public void testAdditionCalculation(){
-        Calculator.setNum1("12");
-        Calculator.setNum2("14");
+        Calculator.setNum1AndOperator("12","add");
+        Calculator.setNum2AndGetResult("14");
         Calculator add = new Add();
         assertEquals(26, add.calculate(), 0.001);
     }
 
     @org.junit.Test
     public void testAdditionCalculationAgain(){
-        Calculator.setNum1("88");
-        Calculator.setNum2("19");
+        Calculator.setNum1AndOperator("88","add");
+        Calculator.setNum2AndGetResult("19");
         Calculator add = new Add();
         assertEquals(107, add.calculate(), 0.001);
     }
 
     @org.junit.Test
     public void testSubtractionCalculation(){
-        Calculator.setNum1("20");
-        Calculator.setNum2("14");
+        Calculator.setNum1AndOperator("20","add");
+        Calculator.setNum2AndGetResult("14");
         Calculator subtract = new Subtract();
         assertEquals(6, subtract.calculate(), 0.001);
     }
 
     @org.junit.Test
     public void testSubtractionCalculationAgain(){
-        Calculator.setNum1("15");
-        Calculator.setNum2("30");
+        Calculator.setNum1AndOperator("15","add");
+        Calculator.setNum2AndGetResult("30");
         Calculator subtract = new Subtract();
         assertEquals(-15, subtract.calculate(), 0.001);
     }
 
     @org.junit.Test
     public void testDivideCalculation(){
-        Calculator.setNum1("21");
-        Calculator.setNum2("3");
+        Calculator.setNum1AndOperator("21","add");
+        Calculator.setNum2AndGetResult("3");
         Calculator divide = new Divide();
         assertEquals(7, divide.calculate(), 0.001);
     }
 
     @org.junit.Test
     public void testDivideCalculationAgain(){
-        Calculator.setNum1("5");
-        Calculator.setNum2("2");
+        Calculator.setNum1AndOperator("5","add");
+        Calculator.setNum2AndGetResult("2");
         Calculator divide = new Divide();
         assertEquals(2.5, divide.calculate(), 0.001);
     }
 
     @org.junit.Test
     public void testMultiplyCalculation(){
-        Calculator.setNum1("7");
-        Calculator.setNum2("3");
+        Calculator.setNum1AndOperator("7","add");
+        Calculator.setNum2AndGetResult("3");
         Calculator multiply = new Multiply();
         assertEquals(21, multiply.calculate(), 0.001);
     }
 
     @org.junit.Test
     public void testMultiplyCalculationAgain(){
-        Calculator.setNum1("2");
-        Calculator.setNum2("20");
+        Calculator.setNum1AndOperator("2","add");
+        Calculator.setNum2AndGetResult("20");
         Calculator multiply = new Multiply();
         assertEquals(40, multiply.calculate(), 0.001);
     }
 
     @org.junit.Test
     public void testModulusCalculation(){
-        Calculator.setNum1("21");
-        Calculator.setNum2("6");
+        Calculator.setNum1AndOperator("21","add");
+        Calculator.setNum2AndGetResult("6");
         Calculator modulus = new Modulus();
         assertEquals(3, modulus.calculate(), 0.001);
     }
 
     @org.junit.Test
     public void testModulusCalculationAgain(){
-        Calculator.setNum1("10");
-        Calculator.setNum2("2");
+        Calculator.setNum1AndOperator("10","add");
+        Calculator.setNum2AndGetResult("2");
         Calculator modulus = new Modulus();
         assertEquals(0, modulus.calculate(), 0.001);
     }
 
     @org.junit.Test
     public void testPowerCalculation(){
-        Calculator.setNum1("3");
-        Calculator.setNum2("2");
+        Calculator.setNum1AndOperator("3","add");
+        Calculator.setNum2AndGetResult("2");
         Calculator power = new Power();
         assertEquals(9, power.calculate(), 0.001);
     }
 
     @org.junit.Test
     public void testPowerCalculationAgain(){
-        Calculator.setNum1("5");
-        Calculator.setNum2("3");
+        Calculator.setNum1AndOperator("5","add");
+        Calculator.setNum2AndGetResult("3");
         Calculator power = new Power();
         assertEquals(125, power.calculate(), 0.001);
     }
 
     @org.junit.Test
     public void testConcatNumber(){
-        assertEquals(Calculator.concatNumber("num_1","12"), ("121"));
+        assertEquals(Calculator.extractNumberFromIdAndAddToString("num_1","12"), ("121"));
     }
 
     @org.junit.Test
     public void testConcatNumberAgain(){
-        assertEquals(Calculator.concatNumber("num_6","7"), ("76"));
+        assertEquals(Calculator.extractNumberFromIdAndAddToString("num_6","7"), ("76"));
     }
 
     @org.junit.Test
     public void testConcatNumberWithDecimal(){
-        assertEquals(Calculator.concatNumber("num_dot","7"), ("7."));
+        assertEquals(Calculator.extractNumberFromIdAndAddToString("num_dot","7"), ("7."));
     }
 
     @org.junit.Test
